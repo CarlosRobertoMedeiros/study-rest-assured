@@ -33,6 +33,19 @@
 		
 	- Verbos Http Rest
 		Link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+		- Get
 		- Post
 		- Validação ao Salvar
+		- Put
+			- Url Parametrizável
+		- Delete
+	
+	- Serialização
+		- Serializando com a Interface Map
+		- Serializando Objeto com Gson
+		- Deserializando Objeto com Gson
+		- 
+		
+		
+		
 	
