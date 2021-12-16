@@ -55,6 +55,49 @@ public class VerbosHTTPTest {
 	}
 	
 	@Test
+	public void deveSalvarUsuarioViaXMLUsandoObjeto() {
+		User user = new User("Usuario Xml", 40); 
+		
+		given()
+			.log().all()
+			//.contentType("application/xml")
+			.contentType(ContentType.XML)
+			.body(user)
+		.when()
+			.post("https://restapi.wcaquino.me/usersXML")
+		.then()
+			.log().all()
+			.statusCode(201)
+			.body("user.@id", is(notNullValue()))
+			.body("user.name", is("Usuario Xml"))
+			.body("user.age", is("40"))
+		;
+		
+	}
+	
+	@Test
+	public void deveDeserializarXMLAoSalvarUsuario() {
+		User user = new User("Usuario Xml", 40); 
+		
+		User usuarioInserido = given()
+			.log().all()
+			.contentType(ContentType.XML)
+			.body(user)
+		.when()
+			.post("https://restapi.wcaquino.me/usersXML")
+		.then()
+			.log().all()
+			.statusCode(201)
+			.extract().body().as(User.class);
+		;
+		Assert.assertThat(usuarioInserido.getId(), notNullValue());
+		Assert.assertThat(usuarioInserido.getName(), is("Usuario Xml"));
+		Assert.assertThat(usuarioInserido.getAge(), is(40));
+		Assert.assertThat(usuarioInserido.getSalary(), nullValue());
+		
+	}
+	
+	@Test
 	public void naoDeveSalvarUsuarioSemNome() {
 		given()
 			.log().all()
@@ -226,8 +269,8 @@ public class VerbosHTTPTest {
 		
 	}
 	
-	//Continuar daqui
-	//Serializando para XML
+
+	
 
 	
 }

@@ -31,7 +31,7 @@
 		- Atributos Estáticos
 		- Request / Response Specification
 		
-	- Verbos Http Rest
+	- Verbos Http Rest(VerbosHttp)
 		Link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 		- Get
 		- Post
@@ -40,11 +40,28 @@
 			- Url Parametrizável
 		- Delete
 	
-	- Serialização
+	- Serialização(EnvioDados)
 		- Serializando com a Interface Map
 		- Serializando Objeto com Gson
 		- Deserializando Objeto com Gson
-		- 
+		- Serializando para Xml
+		- Deserializando para Xml
+	
+	- Formatos de Comunicação(Html)
+		- Query
+		- Query Parametrizável
+		- Header
+		- Trabalhando com HTML
+		- XPath com HTML
+	
+	- Arquivos
+		- Upload
+		- Definindo o Tempo Máximo para Teste
+		- Download
+	
+	- Validando Esquemas
+		
+		
 		
 		
 		
