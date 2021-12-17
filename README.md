@@ -60,6 +60,19 @@
 		- Download
 	
 	- Validando Esquemas
+		- Validando XML
+			Link: https://www.freeformatter.com/xsd-generator.html
+		- Validando JSON
+			Link 1: https://jsonschema.net/home
+			Link 2: https://www.liquid-technologies.com/online-json-to-schema-converter
+	
+	- Autenticações
+		- De Api Pública
+		- Autenticação Básica
+			- Usando senha 
+			- Usando senha preemptiva
+		- JWT
+
 		
 		
 		
