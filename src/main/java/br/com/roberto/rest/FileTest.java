@@ -59,6 +59,7 @@ public class FileTest {
 	
 	@Test
 	public void deveBaixarArquivo() throws IOException {
+		@SuppressWarnings("unused")
 		byte[] image = given()
 			.log().all()
 		.when()
